@@ -45,7 +45,7 @@ export class ColorNumberPickerControl implements ComponentFramework.ReactControl
         // );
 
         const value3 = context.parameters.value3.raw ?? false;
-        const editable = context.parameters.value.security?.editable ?? false;
+        const editable = !context.mode.isControlDisabled;
 
         const props: IColorNumberPicker = { 
             value: this.value,
